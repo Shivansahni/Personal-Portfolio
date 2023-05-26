@@ -7,17 +7,27 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="profile.css">
+    <link rel="icon" href="P1.jpg" type="image/jpg">
 </head>
 <body>
     <!-- navigation bar -->
-    <header id="navbar" >
-        <a href="#About"> About </a>
-        <a href="#Skills"> Skills</a>
-        <a href="#Education"> Education </a>
-        <a href="#Experience"> Experience </a>
-        <a href="#contact"> Contact </a>
-</header>
-<body>
+<header>
+    <div id="navbar-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="navbar">
+      <ul id="navbar-list">
+        <li><a href="#About">About</a></li>
+        <li><a href="#Skills">Skills</a></li>
+        <li><a href="#Education">Education</a></li>
+        <li><a href="#Experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
     <!-- All Containers -->
     <div class="container">
         <!-- Home -->
@@ -31,7 +41,7 @@
                     </div>
                 </div>
                 <div class="abouttext">
-                    <h6 class="">I am a Frontend Web Developer, a Competitive programmer and an Open Soucre Enthusiast.</h6>
+                    <h6 class="aboutintro">I am a Frontend Web Developer, a Competitive programmer and an Open Soucre Enthusiast.</h6>
                 </div>
             </div>
         </div>
@@ -104,7 +114,7 @@ What to do in future i don't know but yes! i can Debug my life as like the Code.
         <p class="mb-1">CGPA : 7.8/10</p>
     </div>
     <div class="pt-5">
-        <h3 class="mb"> Doon International senior secondary school</h3>
+        <h3 class="mb-1"> Doon International senior secondary school</h3>
         <p class="mb-1">Senior Seconary(PCMcs)</p>
         <p class="mb-1">Secured 66%</p>
     </div>
@@ -154,11 +164,17 @@ What to do in future i don't know but yes! i can Debug my life as like the Code.
         <a href="mailto:shivansahni0920@gmail.com">
 <i class="fa-solid fa-envelope"></i>
         </a>
-    <a href="#navbar" title="Back To Top" id="uparrow"><i class="fa-solid fa-circle-arrow-up"></i>
+    <a href="#navbar-toggle" title="Back To Top" id="uparrow"><i class="fa-solid fa-circle-arrow-up"></i>
     </a>
 
 </footer>
 
-</body>
+<script>
+    // JavaScript for toggling the mobile menu
+    document.getElementById("navbar-toggle").addEventListener("click", function() {
+      document.getElementById("navbar").classList.toggle("show");
+    });
+    </script>
+
 </body>
 </html>
